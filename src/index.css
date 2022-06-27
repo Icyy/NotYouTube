@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(18, 18, 18);
+}
+
+p{
+    color: white;
+}
+
+.title{
+    
+    font-weight: bold;
+    margin-top: -90px;
+    margin-left: 135px;
+    margin-bottom: 63px;
+
+}
+.title-n-tn{
+    margin-top: 92px;
+    margin-bottom: -64px;
+    height: 77px;
+    width: 382px;
+    margin-left: 1089px;
+}
+
+.search-bar{
+    margin-top: 18px;
+}
+
+.search-bar input {
+    width: 48%;
+}
+
+.search-bar button {
+    margin-left: 27px;
+}
