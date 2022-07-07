@@ -2,11 +2,11 @@
 import React from 'react';
 import youtube from './APIs/youtube';
 import SearchBar from './SearchBar';
-import Title from './Title';
-
+import VideoList from './VideoList';
+import SelectedVideo from './SelectedVideo';
 
 class App extends React.Component {
-  state = {data:{}, items:[]}
+  state = {data:{}, items:[], selected:null}
 onTermSubmit = async (term) =>{
   const res = await youtube.get('search/',{
       params:
@@ -18,23 +18,21 @@ onTermSubmit = async (term) =>{
     this.setState({data:res.data})
     this.setState({items:res.data.items})
     
-    this.setState({title:this.state.data.items.map((dat, index)=>{
-      return(dat.snippet.title);
    
-    })});
-    this.setState({url:this.state.data.items.map((dat, index)=>{
-      return(dat.snippet.thumbnails.default.url);
-   
-    })});
-    console.log(this.state.url);
 }
+
+selectedVideo = (video)=>{
+  console.log("video title : ",video.snippet.title)
+  this.setState({selected:video})
+}
+
   render(){
   return (
     <div className="App">
       <SearchBar onTermSubmit={this.onTermSubmit}/>
-      {this.state.items.map((item,index)=>{
-        return <Title title={item.snippet.title} url={item.snippet.thumbnails.default.url}/>
-      })}
+      
+      <VideoList videos={this.state.items} selectedVideo={this.selectedVideo}/>
+      <SelectedVideo video={this.state.selected}/>
 
       
      
