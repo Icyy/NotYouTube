@@ -15,16 +15,25 @@ p{
 
 }
 .title-n-tn{
-    margin-top: 92px;
+    
+    margin-top: 88px;
     margin-bottom: -64px;
     height: 77px;
     width: 382px;
     margin-left: 1089px;
     cursor: pointer;
+    position: relative;
+    top: 10px;
+
 }
 
 .search-bar{
+    
     margin-top: 18px;
+    position: relative;
+    top: 45px;
+    left: 10px;
+
 }
 
 .search-bar input {
@@ -33,4 +42,12 @@ p{
 
 .search-bar button {
     margin-left: 27px;
+}
+
+.selectedVideo{
+    margin-left: 10px;
+}
+
+.videoItem{
+    margin-bottom: -25px;
 }
