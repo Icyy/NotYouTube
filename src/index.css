@@ -29,10 +29,13 @@ p{
 
 .search-bar{
     
+   
     margin-top: 18px;
     position: relative;
     top: 45px;
     left: 10px;
+    margin-right: 2px;
+
 
 }
 
