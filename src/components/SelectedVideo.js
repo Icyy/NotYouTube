@@ -13,9 +13,16 @@ class SelectedVideo extends React.Component{
             );
         }
 
+        const vidSrc = "https://www.youtube.com/embed/"
+        
         return(
             <div className="selectedVideo">
-                <p>{this.props.video.snippet.title}</p>
+                {/* <img src={this.props.video.snippet.thumbnails.default.url} /> */}
+                <iframe width="1000" height="550"
+                    src={vidSrc+this.props.video.id.videoId}>
+                </iframe>
+                                  
+                <p>{}</p>
 
             </div>
         );
